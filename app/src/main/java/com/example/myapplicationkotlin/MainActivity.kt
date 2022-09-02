@@ -8,11 +8,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         variables()
+        tiposDeDatos()
     }
 
     private fun variables(){
 
-        //Variables
+        /*  Variables  */
         var myFirstVariable = "Hola Gente"
         var mySecondVarible = 2
         var myTryVariable = "Soy Horacio"
@@ -37,8 +38,6 @@ class MainActivity : AppCompatActivity() {
         println(myFirstVariable)
 
 
-
-
         //Constantes
 
         val myFirstConstant = "Soy una constante?"
@@ -48,5 +47,41 @@ class MainActivity : AppCompatActivity() {
 
         val mySecondConstant = myFirstVariable
         println(mySecondConstant)
+
+    }
+    private fun tiposDeDatos(){
+
+
+        //String - Cadena de Texto
+        val myString = "hola soy una string!"
+        //Se puede colocar el tipo de dato seguido de doble punto
+        val myString2: String = "y me puedo concatenar"
+        //Se puede concatenar multiples strings
+        val myString3: String = myString + " " + myString2
+        println(myString3)
+
+
+        //Enteros (Byte, Short, Int, Long)
+        val myInt: Int = 1
+        val myInt2 = 2
+        //No se pueden concatenar, si no que se se sumar y demas operaciones matematicas
+        val myInt3 = myInt + myInt2
+        println(myInt3)
+
+
+        //Decimales (Float, Double)
+        val myDouble: Double = 1.5
+        val myFloat: Float = 1.5f
+        val myDouble2 = 2.6
+        //Se pueden sumar enteros y decimales
+        val myDouble3 = 1
+        val myDouble4: Double = myDouble + myDouble2 + myDouble3
+        println(myDouble4)
+
+
+        //Booleanos
+        val myBool = true
+        val myBool2: Boolean = false
+
     }
 }
