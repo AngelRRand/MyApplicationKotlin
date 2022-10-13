@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        var saludo = "Hola " + nombre + " la fecha en la que empezaste a estudiar es " + fecha + " tu saldo es de " + saldo.toString()
+        var saludo = "Hola " + nombre + " la fecha en la que empezaste a estudiar es " + fecha + " tu saldo es de " + saldo.toString() + " $"
         println(saludo)
         //println(moneda)
 
