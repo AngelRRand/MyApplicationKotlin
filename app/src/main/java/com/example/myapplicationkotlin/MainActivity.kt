@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             4,5,6 -> print("\n En invierno hay ofertas de hasta 5%")
             7,8,9 -> print("\n En primavera el precio por nuestro servicio vip es del 30%")
             10,11,12 -> print("\n En verano hay ofertas de hasta 10%")
+            else -> print("\n La fecha es incorrecta")
         }
 
     }
