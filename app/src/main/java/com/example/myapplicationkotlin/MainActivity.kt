@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         //Los valores y las variables son different.
         val fecha = "14/09/2022"
+        //Los strings cuantan con posiones fijas
+        //           0123456789
         var nombre = "Orasio"
         var vip = false
         nombre = "Horacio"
@@ -38,8 +40,28 @@ class MainActivity : AppCompatActivity() {
 
 
         //Los operates arithmetics son los mismo que en javascript
-
+        //   +   -   %
         //Los operadores comparativos son los mismo que en javascript
+        // == > <=
+        //The operates conditions son los mismo que en javascript
+        var precioVip = 350
+        var rest = precioVip - saldo
+        var mes = fecha.subSequence(3, 5).toString().toInt()
+        if(vip == true) println("Bienvenido $nombre, te queremos mucho!! :D")
+        else {
+            if (rest <= 0){
+                println("Buenos dias $nombre! Te recordamos que nuestro servicio vip esta disponible y cuentas con saldo suficiente para el :D")
+            }else{
+                println("Hola $nombre, paga el servicio vip. Con tu saldo actual te faltan $ $rest")
+            }
+        }
+        when(mes){
+            1,2,3 -> print("\n En otoño no tenemos ofertas")
+            4,5,6 -> print("\n En invierno hay ofertas de hasta 5%")
+            7,8,9 -> print("\n En primavera el precio por nuestro servicio vip es del 30%")
+            10,11,12 -> print("\n En verano hay ofertas de hasta 10%")
+        }
+
     }
 
 }
