@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
         const val moneda = "EUR"
     }
 
-    //Los datos de tipo float se les da a las variables que contengan un numeros decimales
+    //Los date de tipo float se les da a las variables que contengan un numeros decimales
     //Se les añade una f, al final.
 
     var saldo :Float = 300.54f
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Los valores y las variables son diferentes.
+        //Los valores y las variables son different.
         val fecha = "14/09/2022"
         var nombre = "Orasio"
         var vip = false
@@ -32,10 +32,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        var saludo = "Holaa " + nombre + " la fecha en la que empezaste a estudiar es " + fecha + " tu saldo es de " + saldo.toString() + " $"
+        var saludo = "Holaa $nombre la fecha en la que empezaste a estudiar es $fecha tu saldo es de $saldo $"
         println(saludo)
         //println(moneda)
 
+
+        //Los operates arithmetics son los mismo que en javascript
+
+        //Los operadores comparativos son los mismo que en javascript
     }
 
 }
