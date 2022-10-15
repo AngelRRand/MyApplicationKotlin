@@ -8,16 +8,8 @@ class MainActivity : AppCompatActivity() {
         //Las constantes no pueden estar junto a las demas variables
         const val moneda = "EUR"
     }
-
-    //Los date de tipo float se les da a las variables que contengan un numeros decimales
-    //Se les añade una f, al final.
-
     var saldo :Float = 300.54f
-
-    //Los datos de tipo Double son un tipo de dato que usa mucho mas espacio de memoria que el resto.
-    var sueldo = 464.82
-
-    //Los enteros no admiten numeros decimales
+    var sueldo :Float = 464.82f
     var entero :Int = 62
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,11 +20,11 @@ class MainActivity : AppCompatActivity() {
         val fecha = "14/09/2022"
         //Los strings cuantan con posiones fijas
         //           0123456789
-        var nombre = "Orasio"
-        var vip = false
+        var nombre :String = "Orasio"
+        var vip :Boolean = false
         nombre = "Horacio"
 
-
+        mostrar_saldo()
 
         var saludo = "Holaa $nombre la fecha en la que empezaste a estudiar es $fecha tu saldo es de $saldo $"
         println(saludo)
@@ -47,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         var precioVip = 350
         var rest = precioVip - saldo
         var mes = fecha.subSequence(3, 5).toString().toInt()
+        var dia = fecha.subSequence(0, 2).toString().toInt()
+        if(dia == 1)ingresar_sueldo()
         if(vip == true) println("Bienvenido $nombre, te queremos mucho!! :D")
         else {
             if (rest <= 0){
@@ -92,4 +86,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun mostrar_saldo(){
+        println("Tienes $saldo ")
+    }
+
+    fun ingresar_sueldo(){
+        saldo += sueldo
+        println("Se ha ingresado $sueldo")
+        mostrar_saldo()
+    }
 }
