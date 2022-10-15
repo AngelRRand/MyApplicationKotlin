@@ -108,9 +108,16 @@ class MainActivity : AppCompatActivity() {
         mostrar_saldo()
     }
 
-    fun retirar_dinero(dinero :Float){
-        saldo -= dinero
-        println("Se ha hecho un retiro de  $dinero")
-        mostrar_saldo()
+    fun retirar_dinero(cantidad :Float){
+        if(verficarCantidad(cantidad)){
+            saldo -= cantidad
+            println("Se ha hecho un retiro de  $cantidad")
+            mostrar_saldo()
+        }
+        else println("No tienes suficiente saldo. Revisa la cantidad ingresada.")
+    }
+
+    fun verficarCantidad(cantidad: Float): Boolean {
+        return cantidad < saldo
     }
 }
