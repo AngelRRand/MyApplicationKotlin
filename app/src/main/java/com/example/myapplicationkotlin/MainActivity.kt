@@ -63,6 +63,33 @@ class MainActivity : AppCompatActivity() {
             else -> print("\n La fecha es incorrecta")
         }
 
+        //The operates logics son los mismo que en javascript
+        // ||  &&
+
+
+        //Bucles
+        var pin: Int = 1234
+        var intentos = 0
+        var clave_ingresada: Int = 1232
+        var authentication:Boolean = false
+        do{
+            println("Ingrese el PIN: ")
+            println("Clave ingresada: ${clave_ingresada++}")
+            if(clave_ingresada == pin) {
+                authentication = true
+                break
+            }
+            else{
+                intentos++
+                if(intentos == 3) {
+                    println("Tarjeta bloqueada")
+                }
+            }
+        }while(intentos < 3 && clave_ingresada != pin)
+
+        if(authentication == true) println("Bienvenido has ingresado a tu cuenta")
+
+
     }
 
 }
