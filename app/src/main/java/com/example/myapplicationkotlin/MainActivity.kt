@@ -90,6 +90,17 @@ class MainActivity : AppCompatActivity() {
         ingresar_dinero(50.6f)
         retirar_dinero(40f)
 
+
+        //Arrays
+        //En un array se especifica el tipo de dato que contine dentro
+        var recibos: Array<String> = arrayOf("luz", "agua", "gas")
+
+        //Matriz, Conjunto de arrays
+        var matriz = arrayOf(
+            intArrayOf(1,2,3),
+            intArrayOf(4,5,6),
+            intArrayOf(7,8,9)
+        )
     }
 
     fun mostrar_saldo(){
