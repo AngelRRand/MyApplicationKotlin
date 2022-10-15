@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
     fun ingresar_sueldo(){
         saldo += sueldo
-        println("Se ha ingresado $sueldo")
+        println("tienes un sueldo de: $sueldo")
         mostrar_saldo()
     }
 
