@@ -16,15 +16,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Los valores y las variables son different.
+
         val fecha = "14/09/2022"
         //Los strings cuantan con posiones fijas
-        //           0123456789
+
         var nombre :String = "Orasio"
         var vip :Boolean = false
         nombre = "Horacio"
 
-        mostrar_saldo()
+
+        ingresar_sueldo()
+
+
 
         var saludo = "Holaa $nombre la fecha en la que empezaste a estudiar es $fecha tu saldo es de $saldo $"
         println(saludo)
@@ -83,6 +86,9 @@ class MainActivity : AppCompatActivity() {
 
         if(authentication == true) println("Bienvenido has ingresado a tu cuenta")
 
+        mostrar_saldo()
+        ingresar_dinero(50.6f)
+        retirar_dinero(40f)
 
     }
 
@@ -93,6 +99,18 @@ class MainActivity : AppCompatActivity() {
     fun ingresar_sueldo(){
         saldo += sueldo
         println("Se ha ingresado $sueldo")
+        mostrar_saldo()
+    }
+
+    fun ingresar_dinero(cantidad :Float){
+        saldo += cantidad
+        println("Se ha ingresado $cantidad")
+        mostrar_saldo()
+    }
+
+    fun retirar_dinero(dinero :Float){
+        saldo -= dinero
+        println("Se ha hecho un retiro de  $dinero")
         mostrar_saldo()
     }
 }
