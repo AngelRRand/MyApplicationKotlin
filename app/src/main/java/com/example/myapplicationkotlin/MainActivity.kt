@@ -101,6 +101,8 @@ class MainActivity : AppCompatActivity() {
             intArrayOf(4,5,6),
             intArrayOf(7,8,9)
         )
+
+        recorrerArray(recibos)
     }
 
     fun mostrar_saldo(){
@@ -131,4 +133,42 @@ class MainActivity : AppCompatActivity() {
     fun verficarCantidad(cantidad: Float): Boolean {
         return cantidad < saldo
     }
+
+    fun recorrerArray(array: Array<String>){
+        for(i in array){
+            println(i)
+        }
+
+        for(i in array.indices){
+            println(array.get(i))
+        }
+
+
+        for(i in 0 .. array.size - 1){
+            println("${i+1} ${array.get(i)} ")
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
