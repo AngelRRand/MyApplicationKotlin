@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun mostrar_saldo(){
-        println("Tienes $saldo ")
+        println("Tienes $saldo $")
     }
 
     fun ingresar_sueldo(){
@@ -117,7 +117,7 @@ class MainActivity : AppCompatActivity() {
 
     fun ingresar_dinero(cantidad :Float){
         saldo += cantidad
-        println("Se ha ingresado $cantidad")
+        println("Se ha ingresado $cantidad $")
         mostrar_saldo()
     }
 
