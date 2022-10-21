@@ -108,7 +108,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        var clientesVip : Set<Int> = setOf(1234,5678,4124)
+        var clientesVip: Set<Int> = setOf(1234,5678,4124)
+        val setMesclado= setOf(2, "HOLA", "c")
+        println(clientesVip)
+        println("El tamaño de clientes VIP es de ${clientesVip.size}")
 
         recorrerArray(recibos)
     }
