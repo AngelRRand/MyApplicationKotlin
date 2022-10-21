@@ -139,6 +139,7 @@ class MainActivity : AppCompatActivity() {
         println(bolsa.first())
         println(bolsa.last())
         println(bolsa.elementAt(1))
+        println(bolsa.firstOrNull())
     }
 
     fun mostrar_saldo(){
