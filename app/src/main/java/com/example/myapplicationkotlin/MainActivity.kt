@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity() {
         var clientes: MutableSet<Int> = mutableSetOf(1234,5678,4124,4233)
         clientes.add(1123)
         clientes.remove(5678)
-
+        println(clientes)
 
 
 
