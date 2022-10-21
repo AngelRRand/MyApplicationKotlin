@@ -108,6 +108,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        var clientesVip : Set<Int> = setOf(1234,5678,4124)
 
         recorrerArray(recibos)
     }
