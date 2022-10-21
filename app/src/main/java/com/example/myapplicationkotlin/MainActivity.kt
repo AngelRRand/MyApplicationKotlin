@@ -108,6 +108,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //Conjunto inmmutable, NO SE PUEDEN AÑADIR
         var clientesVip: Set<Int> = setOf(1234,5678,4124)
         val setMesclado= setOf(2, "HOLA", "c")
         println(clientesVip)
@@ -115,6 +116,17 @@ class MainActivity : AppCompatActivity() {
         if(clientesVip.contains(1234)) println("El usuario 1234 es Vip")
         if(clientesVip.contains(1235)) println("El usuario 1234 es Vip")
         else println("El usuarion 1235 no es vip")
+
+        //Conjunto mutable, SE PUEDE AÑADIR Y ELIMINAR
+        var clientes: MutableSet<Int> = mutableSetOf(1234,5678,4124,4233)
+        clientes.add(1123)
+        clientes.remove(5678)
+
+
+
+
+
+
         recorrerArray(recibos)
     }
 
