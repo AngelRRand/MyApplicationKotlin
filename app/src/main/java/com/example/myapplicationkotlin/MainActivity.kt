@@ -112,7 +112,9 @@ class MainActivity : AppCompatActivity() {
         val setMesclado= setOf(2, "HOLA", "c")
         println(clientesVip)
         println("El tamaño de clientes VIP es de ${clientesVip.size}")
-
+        if(clientesVip.contains(1234)) println("El usuario 1234 es Vip")
+        if(clientesVip.contains(1235)) println("El usuario 1234 es Vip")
+        else println("El usuarion 1235 no es vip")
         recorrerArray(recibos)
     }
 
