@@ -95,6 +95,8 @@ class MainActivity : AppCompatActivity() {
         //En un array se especifica el tipo de dato que contine dentro
         var recibos: Array<String> = arrayOf("luz", "agua", "gas")
 
+        recorrerArray(recibos)
+
         //Matriz, Conjunto de arrays
         var matriz = arrayOf(
             intArrayOf(1,2,3),
@@ -123,11 +125,20 @@ class MainActivity : AppCompatActivity() {
         clientes.remove(5678)
         println(clientes)
 
+        //Coleccion LISTAS
 
+        val divisas: List<String> = listOf("USD", "EUR", "ARG")
+        println(divisas)
 
+        recorrerLista(divisas)
 
-
-        recorrerArray(recibos)
+        val bolsa: MutableList<String> = mutableListOf("Coca", "Samsung", "Toyota")
+        bolsa.add("Adobe")
+        bolsa.remove("Coca")
+        bolsa.removeAt(1)
+        println(bolsa.first())
+        println(bolsa.last())
+        println(bolsa.elementAt(1))
     }
 
     fun mostrar_saldo(){
@@ -172,6 +183,12 @@ class MainActivity : AppCompatActivity() {
 
         for(i in 0 .. array.size - 1){
             println("${i+1} ${array.get(i)} ")
+        }
+    }
+
+    fun recorrerLista(divisas: List<String>){
+        for(i in divisas){
+            print(i)
         }
     }
 
