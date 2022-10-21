@@ -98,9 +98,16 @@ class MainActivity : AppCompatActivity() {
         //Matriz, Conjunto de arrays
         var matriz = arrayOf(
             intArrayOf(1,2,3),
-            intArrayOf(4,5,6),
-            intArrayOf(7,8,9)
+            intArrayOf(4,5,6,7,8,9),
+            intArrayOf(10,11,12)
         )
+
+        for(i in (0 until matriz.size)){
+            for (j in (0 until matriz[i].size)){
+                println("Posicion[${i}] [${j}] : ${matriz[i][j]}")
+            }
+        }
+
 
         recorrerArray(recibos)
     }
@@ -133,6 +140,7 @@ class MainActivity : AppCompatActivity() {
     fun verficarCantidad(cantidad: Float): Boolean {
         return cantidad < saldo
     }
+
 
     fun recorrerArray(array: Array<String>){
         for(i in array){
